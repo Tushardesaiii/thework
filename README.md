@@ -1,6 +1,3 @@
-# thework  
-
-
 # Prosperity - Becoming Someone's Hope
 
 ## Introduction

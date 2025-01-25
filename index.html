@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prosperity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="logo.jpg">
+
+ 
+  <style>
+    /* Background setup */
+    body {
+      background-color: rgb(255, 255, 255);
+      
+    }
+    .background {
+      background-image: url('images/project3.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      /* Full height of the viewport */
+      width: 100%;
+      position: relative;
+    }
+
+    /* Enhanced CTA Styling */
+    .cta {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      padding: 30px 40px;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+      border-radius: 15px;
+      max-width: 350px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+
+    .cta:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    }
+
+    .cta h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      font-size: 1.125rem;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      padding: 12px 24px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: transform 0.2s ease-in-out, background-color 0.2s;
+    }
+
+    .cta a:hover {
+      transform: translateY(-3px);
+    }
+
+    .cta .donate-btn {
+      background-color: #00c4cc
+    }
+
+    .cta .donate-btn:hover {
+      background-color: transparent;
+    }
+
+    .cta .login-btn {
+      background-color: #4a5568;
+    }
+
+    .cta .login-btn:hover {
+      background-color: #2d3748;
+    }
+
+    /* Slideshow Styling */
+    .slideshow-frame {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50vw;
+      /* Adjusted width */
+      height: 60vh;
+      /* Adjusted height */
+      border: 5px solid rgba(255, 255, 255, 0.5);
+      border-radius: 15px;
+      overflow: hidden;
+      z-index: 10;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .slideshow-images {
+      display: flex;
+      animation: slideShow 16s ease-in-out infinite;
+    }
+
+    .slideshow-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slideshow-images img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes slideShow {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-100%);
+      }
+
+      50% {
+        transform: translateX(-200%);
+      }
+
+      75% {
+        transform: translateX(-300%);
+      }
+    }
+
+    /* Responsive design adjustments */
+    @media (max-width: 768px) {
+      .cta {
+        max-width: 280px;
+        padding: 20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .slideshow-frame {
+        width: 80vw;
+        height: 50vh;
+        right: 10%;
+      }
+
+      .slideshow-container {
+        height: 100%;
+      }
+
+      .slideshow-images img {
+        object-position: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background and Overlay -->
+  <div class="background">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <!-- Navigation Bar -->
+    <div class="relative z-10 flex items-center justify-between h-16 max-w-7xl mx-auto px-6 navbar">
+      <div class="text-white text-2xl font-bold">
+        <img src="logo.jpg" alt="Logo" class="h-12">
+        <h1 class="text-2xl font-bold text-white">Prosperity</h1>
+      </div>
+      <div class="flex space-x-8 text-white text-lg">
+        <a href="#home" class="nav-item hover:text-gray-300">Roundup+</a>
+        <a href="#about" class="nav-item hover:text-gray-300">Events</a>
+        <a href="#services" class="nav-item hover:text-gray-300">Search</a>
+        <a href="#contact" class="nav-item hover:text-gray-300">Sign Up</a>
+      </div>
+    </div>
+
+    <!-- Enhanced CTA Block -->
+    <div class="cta text-white">
+      <h1 class="text-4xl font-bold mb-4">Prosperity Foundation</h1>
+      <p class="text-lg mb-6">A small act can create a huge impact in someone's life. Be the change today!</p>
+      <div class="flex space-x-4">
+        <a href="#donate" class="donate-btn">Donate Now</a>
+        <a href="#login" class="login-btn">Log In</a>
+      </div>
+    </div>
+
+    <!-- Enhanced Slideshow Frame -->
+    <div class="slideshow-frame">
+      <div class="slideshow-container">
+        <div class="slideshow-images">
+          <img src="images/ppt1.jpg" alt="Image 1">
+          <img src="images/ppt2.jpg" alt="Image 2">
+          <img src="images/ppt3.jpg" alt="Image 3">
+          <img src="images/ppt4.jpg" alt="Image 4">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- devider -->
+  
+
+
+  <!-- SECTION 2  -->
+   <hr>
+
+
+  <!-- titel1 -->
+  
+  <div class="bg-black">
+  
+  <!-- Heading Section -->
+  <div class="text-center mt-4 mb-4 bg-gradient-to-r from-red-400 to-red-800 text-white py-12 rounded-lg shadow-xl">
+    <h2 class="text-5xl font-extrabold leading-tight">
+      Donate to Urgent Needs Of Planet (SOS)
+    </h2>
+    <p class="mt-4 text-xl md:text-2xl font-light max-w-3xl mx-auto">
+      Time is critical—help organizations making a real difference in the world. Your donation can save lives and create lasting change. Join us now to support their mission!
+    </p>
+  </div>
+
+  
+
+  <!-- Cards Section -->
+<div class="max-w-screen-xl mx-auto px-6 py-12 sm:px-10 md:px-16">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-r from-red-500 to-red-800 text-white rounded-lg shadow-lg overflow-hidden">
+          <img src="images/ngo1" class="w-full h-48 object-cover" alt="NGO Image 1">
+          <div class="p-6">
+              <h3 class="text-lg font-bold mb-2">NGO Name 1</h3>
+              <p class="text-sm text-gray-200">A brief description about this NGO and its mission. Their goals are inspiring and impactful, helping those in need.</p>
+          </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-r from-red-500 to-red-800 text-white rounded-lg shadow-lg overflow-hidden">
+          <img src="images/ngo3" class="w-full h-48 object-cover" alt="NGO Image 2">
+          <div class="p-6">
+              <h3 class="text-lg font-bold mb-2">NGO Name 2</h3>
+              <p class="text-sm text-gray-200">This NGO focuses on environmental protection and sustainable development, making the world greener for future generations.</p>
+          </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gradient-to-r from-red-500 to-red-800 text-white rounded-lg shadow-lg overflow-hidden">
+          <img src="images/ngo2" class="w-full h-48 object-cover" alt="NGO Image 3">
+          <div class="p-6">
+              <h3 class="text-lg font-bold mb-2">NGO Name 3</h3>
+              <p class="text-sm text-gray-200">Focused on healthcare and education, this NGO provides free medical services and education for underprivileged communities.</p>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+
+<hr>
+
+<!-- FEATURES -->
+    <!-- titrl -->
+    <section class="py-12 bg-white text-gray-100 sm:py-12 lg:py-16">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="max-w-xl mx-auto text-center xl:max-w-2xl">
+          <h2 class="text-3xl font-bold leading-tight text-gray-700 sm:text-4xl xl:text-5xl mb-6">Be someone's Hope Today </h2>
+          <p class="mb-4 text-gray-700">Discover features that empower our mission and help create a better impact.</p>
+        </div>
+        <div class="grid max-w-6xl grid-cols-1 mx-auto mt-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 sm:mt-12 lg:mt-20">
+          
+          <!-- Donation Marketplace -->
+          <div class="overflow-hidden bg-[#00c4cc] text-white p-4 shadow-md rounded-xl">
+            <div class="p-9 " >
+              <svg class="w-12 h-12 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M12 1v22M4 7h16M4 13h16M4 19h16" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <h3 class="mt-6 text-2xl font-bold text-gray-900">Donation Marketplace</h3>
+              <p class="mt-6 text-base text-gray-600">Connect donors with causes seamlessly through a transparent platform.</p>
+            </div>
+          </div>
+          
+          <!-- Countup+ -->
+          <div class=" bg-gradient-to-r from-amber-200 to-yellow-400 shadow-md rounded-xl">
+            <div class="p-9">
+              <svg class="w-12 h-12 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18M9 6h6M7 12h10M5 18h14" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <h3 class="mt-6 text-2xl font-bold text-gray-900">Countup+</h3>
+              <p class="mt-6 text-base text-gray-600">Track your milestones and growth with precision and style.</p>
+            </div>
+          </div>
+          
+          <!-- Entertainment Zone -->
+          <div class="overflow-hidden bg-[#00c4cc] text-white p-4 shadow-md rounded-xl">
+            <div class="p-9">
+              <svg class="w-12 h-12 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M4 5h16M4 12h16M4 19h16M7 7v10M17 7v10" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <h3 class="mt-6 text-2xl font-bold text-gray-900">Entertainment Zone</h3>
+              <p class="mt-6 text-base text-gray-600">Enjoy engaging content and activities tailored to your interests.</p>
+            </div>
+          </div>
+          
+          <!-- Charity Map -->
+          <div class="overflow-hidden bg-[#00c4cc] text-white p-4 shadow-md rounded-xl">
+            <div class="p-9">
+              <svg class="w-12 h-12 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2.5a9.5 9.5 0 0 1 0 19 9.5 9.5 0 0 1 0-19zM12 7v10M7 12h10" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <h3 class="mt-6 text-2xl font-bold text-gray-900">Charity Map</h3>
+              <p class="mt-6 text-base text-gray-600">Explore charities and their impacts through an interactive map.</p>
+            </div>
+          </div>
+          
+          <!-- Events -->
+          <div class="overflow-hidden bg-[#00c4cc] text-white p-4 shadow-md rounded-xl">
+            <div class="p-9">
+              <svg class="w-12 h-12 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M3 8h18M3 16h18M5 3v18M19 3v18" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <h3 class="mt-6 text-2xl font-bold text-gray-900">Events</h3>
+              <p class="mt-6 text-base text-gray-600">Join and organize impactful events in your community.</p>
+            </div>
+          </div>
+          
+          <!-- Explore More -->
+          <div class=" overflow-hidden bg-[#00c4cc] text-white p-4 shadow-md rounded-xl">
+            <div class="p-9">
+              <svg class="w-12 h-12 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2l3 3h5v5l3 3-3 3v5h-5l-3 3-3-3H4v-5L1 12l3-3V4h5l3-3z" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <h3 class="mt-6 text-2xl font-bold text-gray-900">Explore More</h3>
+              <p class="mt-6 text-base text-gray-600">Discover additional features and opportunities here.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <hr>
+    
+
+ <!-- titel 2 -->
+  
+  <div class="text-center my-16 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white py-12 rounded-lg shadow-xl">
+    <h2 class="text-5xl font-extrabold leading-tight">
+      Donate to Featured NGOs
+    </h2>
+    <p class="mt-4 text-xl md:text-2xl font-light max-w-3xl mx-auto">
+      Discover organizations that are making a real difference in the world. 
+      Join us in supporting their mission!
+    </p>
+  </div>
+  
+
+
+  <!-- second Row of Cards -->
+  
+ <!-- Cards Section -->
+<div class="max-w-screen-xl mx-auto px-6 py-12 sm:px-10 md:px-16">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white rounded-lg shadow-lg overflow-hidden">
+          <img src="images/ngo1" class="w-full h-48 object-cover" alt="NGO Image 1">
+          <div class="p-6">
+              <h3 class="text-lg font-bold mb-2">NGO Name 1</h3>
+              <p class="text-sm text-gray-200">A brief description about this NGO and its mission. Their goals are inspiring and impactful, helping those in need.</p>
+          </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white rounded-lg shadow-lg overflow-hidden">
+          <img src="images/ngo3" class="w-full h-48 object-cover" alt="NGO Image 2">
+          <div class="p-6">
+              <h3 class="text-lg font-bold mb-2">NGO Name 2</h3>
+              <p class="text-sm text-gray-200">This NGO focuses on environmental protection and sustainable development, making the world greener for future generations.</p>
+          </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white rounded-lg shadow-lg overflow-hidden">
+          <img src="images/ngo2" class="w-full h-48 object-cover" alt="NGO Image 3">
+          <div class="p-6">
+              <h3 class="text-lg font-bold mb-2">NGO Name 3</h3>
+              <p class="text-sm text-gray-200">Focused on healthcare and education, this NGO provides free medical services and education for underprivileged communities.</p>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+<!-- Success Story Section -->
+<hr>
+<div class="success bg-black px-6 py-12">  
+    <h1 class="mb-6 text-center font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        Discover how this platform has been a  
+        <span class="inline-block text-[#00c4cc] px-6 py-2 shadow-md rounded-xl bg-opacity-30">"Beacon of Hope"</span>
+    </h1>
+    
+    <p class="text-lg text-center font-normal text-gray-400 lg:text-xl mb-10">
+        Empowering change and transforming countless innocent lives!
+    </p>
+
+    <!-- Image Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="grid gap-4">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+        </div>
+        <div class="grid gap-4">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+        </div>
+        <div class="grid gap-4">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+        </div>
+        <div class="grid gap-4">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
